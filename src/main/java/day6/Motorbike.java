@@ -12,13 +12,8 @@ public class Motorbike {
     }
 
     public int yearDifference(int inputYear){
-        if (inputYear < yearManufacture) {
-            inputYear = yearManufacture - inputYear;
-        }
-        if (inputYear > yearManufacture) {
-            inputYear = inputYear - yearManufacture;
-        }
-        return inputYear;
+
+        return Math.abs(inputYear - yearManufacture);
     }
 
 

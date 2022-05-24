@@ -5,15 +5,10 @@ public class Car {
     private String color;
     private int yearManufacture = 0;
 
-    public int yearDifference(int inputYear){
-        if (inputYear < yearManufacture) {
-            inputYear = yearManufacture - inputYear;
-        }
-        if (inputYear > yearManufacture) {
-            inputYear = inputYear - yearManufacture;
-        }
-        return inputYear;
+    public int yearDifference(int inputYear) {
+        return Math.abs(yearManufacture - inputYear);
     }
+
 
     public String getModel() {
         return model;

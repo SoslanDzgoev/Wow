@@ -6,34 +6,27 @@ public class Teacher {
     String name;
     String subject;
     Random random = new Random();
-    void evaluate (Student student){
 
-        int randNumber = random.nextInt(4)+2;
-        if (randNumber == 2){
-            System.out.println("Преподаватель " + name +
-                    " оценил студента с именем " + student.name +
-                    " по предмету " +  subject +
-                    " на оценку " + "неудавлетворительно");
+    void evaluate(Student student) {
+        int randNumber = random.nextInt(4) + 2;
+        String evaluation = "";
+        switch (randNumber){
+            case 2:
+                evaluation = "неудовлетворительно";
+                break;
+            case 3:
+                evaluation = "удовлетворительно";
+                break;
+            case 4:
+                evaluation = "хорошо";
+                break;
+            case 5:
+                evaluation = "отлично";
+                break;
         }
-        if (randNumber == 3){
-            System.out.println("Преподаватель " + name +
-                    " оценил студента с именем " + student.name +
-                    " по предмету " +  subject +
-                    " на оценку " + "удавлетворительно");
-        }if (randNumber == 4){
-            System.out.println("Преподаватель " + name +
-                    " оценил студента с именем " + student.name +
-                    " по предмету " +  subject +
-                    " на оценку " + "хорошо");
-        }if (randNumber == 5){
-            System.out.println("Преподаватель " + name +
-                    " оценил студента с именем " + student.name +
-                    " по предмету " +  subject +
-                    " на оценку " + "отлично");
-        }
-
-
+        System.out.println("Преподаватель " + name + " оценил студента с именем " + student.name + " по предмету " + subject + " на оценку " + evaluation);
     }
+
 
     public String getName() {
         return name;

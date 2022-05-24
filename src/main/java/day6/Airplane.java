@@ -1,11 +1,11 @@
 package day6;
 
 public class Airplane {
-    String manufacturer;
-    int year;
-    double length;
-    int weight;
-    int fuel = 0;
+    private String manufacturer;
+    private int year;
+    private double length;
+    private int weight;
+    private int fuel = 0;
 
     public void fillUp (int fill){
         fuel = fill + fuel;
