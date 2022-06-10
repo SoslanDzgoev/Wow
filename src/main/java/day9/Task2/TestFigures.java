@@ -18,14 +18,12 @@ public class TestFigures {
         System.out.println(calculateRedArea(figures));
     }
 
-
     public static double calculateRedPerimeter(Figure[] figures) {
         double sum = 0;
         for (Figure figure : figures) {
             if (figure.getColor().equals("Red"))
                 sum += figure.perimeter();
         }
-
         return sum;
     }
 
