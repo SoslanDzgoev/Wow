@@ -1,7 +1,8 @@
 package day11.task2;
 
-public class Shaman extends Hero implements Healer{
+public class Shaman extends Hero implements Healer {
     int magicAttack = 10;
+
     public Shaman() {
         physAttack = 10;
         physDef = 0.2;
@@ -11,9 +12,9 @@ public class Shaman extends Hero implements Healer{
 
     @Override
     public void healHimself() {
-        if (health + 50 > 100){
+        if (health + 50 > 100) {
             health = 100;
-        }else {
+        } else {
             health += 50;
         }
 
@@ -21,9 +22,9 @@ public class Shaman extends Hero implements Healer{
 
     @Override
     public void healTeammate(Hero hero) {
-        if(hero.health + 30 > 100){
+        if (hero.health + 30 > 100) {
             hero.health = 100;
-        }else {
+        } else {
             hero.health += 30;
         }
     }

@@ -10,18 +10,18 @@ public class Paladin extends Hero implements Healer {
 
     @Override
     public void healHimself() {
-        if (health + 25 > 100){
+        if (health + 25 > 100) {
             health = 100;
-        }else {
+        } else {
             health += 25;
         }
     }
 
     @Override
     public void healTeammate(Hero hero) {
-        if(hero.health + 10 > 100){
+        if (hero.health + 10 > 100) {
             hero.health = 100;
-        }else {
+        } else {
             hero.health += 10;
         }
     }

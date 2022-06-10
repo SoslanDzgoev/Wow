@@ -15,9 +15,9 @@ public abstract class Hero implements PhysAttack {
     @Override
     public void physicalAttack(Hero hero) {
         double attack = physAttack * (1 - hero.physDef);
-        if (hero.health - attack < MIN){
+        if (hero.health - attack < MIN) {
             hero.health = 0;
-        }else {
+        } else {
             hero.health -= attack;
         }
     }
